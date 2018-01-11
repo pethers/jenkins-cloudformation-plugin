@@ -440,7 +440,7 @@ public class CloudFormation {
         } else {
             r.withTemplateBody(recipe);
         }
-        r.withCapabilities("CAPABILITY_IAM");
+        r.withCapabilities("CAPABILITY_NAMED_IAM");
 
         return r;
     }
@@ -450,7 +450,7 @@ public class CloudFormation {
         r.withStackName(getExpandedStackName());
         r.withParameters(parameters);
         r.withTemplateBody(recipe);
-        r.withCapabilities("CAPABILITY_IAM");
+        r.withCapabilities("CAPABILITY_NAMED_IAM");
 
         return r;
 	}
